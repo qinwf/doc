@@ -1,0 +1,604 @@
+<!DOCTYPE HTML>
+<html lang="en" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>关于tm包 | jiebaR 中文分词  </title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../faq/s2t.html" />
+    
+    
+    <link rel="prev" href="../faq/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="6.1" data-basepath=".." data-revision="Tue Dec 15 2015 22:27:30 GMT+0800 (中国标准时间)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Type to search" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="basic/index.html">
+            
+                
+                    <a href="../basic/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        介绍
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="basic/install.html">
+            
+                
+                    <a href="../basic/install.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        安装
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="basic/new.html">
+            
+                
+                    <a href="../basic/new.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        新版特性 v0.4-v0.6
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="basic/new-0.7.html">
+            
+                
+                    <a href="../basic/new-0.7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        新版特性 v0.7
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="quick/index.html">
+            
+                
+                    <a href="../quick/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        快速指南
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="quick/segment.html">
+            
+                
+                    <a href="../quick/segment.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        分词
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="quick/tagger.html">
+            
+                
+                    <a href="../quick/tagger.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        词性标记
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="quick/keywords.html">
+            
+                
+                    <a href="../quick/keywords.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        关键词提取
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="quick/sim.html">
+            
+                
+                    <a href="../quick/sim.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Simhash计算
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="quick/quick_mode.html">
+            
+                
+                    <a href="../quick/quick_mode.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        快速模式
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="dict/index.html">
+            
+                
+                    <a href="../dict/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        词典使用
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="dict/init.html">
+            
+                
+                    <a href="../dict/init.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        词典设置
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="dict/user.html">
+            
+                
+                    <a href="../dict/user.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        词典格式
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="dict/dict.html">
+            
+                
+                    <a href="../dict/dict.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        系统词典与用户词典
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="dict/others.html">
+            
+                
+                    <a href="../dict/others.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        其他词典
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="param/index.html">
+            
+                
+                    <a href="../param/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        常用参数
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="param/worker.html">
+            
+                
+                    <a href="../param/worker.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        worker参数
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="trans/index.html">
+            
+                
+                    <a href="../trans/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        转换词库
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="faq/index.html">
+            
+                
+                    <a href="../faq/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        常见问题
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="6.1" data-path="faq/tm.html">
+            
+                
+                    <a href="../faq/tm.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.1.</b>
+                        
+                        关于tm包
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.2" data-path="faq/s2t.html">
+            
+                
+                    <a href="../faq/s2t.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.2.</b>
+                        
+                        繁简转换
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="6.3" data-path="faq/warnings.html">
+            
+                
+                    <a href="../faq/warnings.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.3.</b>
+                        
+                        警告信息
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Published with GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table of Contents"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Search"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Font Settings"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">White</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sepia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Night</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Share"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Share on Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Share on Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Share on Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Share on Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Share on Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >jiebaR 中文分词  </a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h3 id="%E4%B8%BA%E4%BB%80%E4%B9%88-tm-%E5%8C%85%E9%87%8C%E8%AF%8D%E9%83%BD%E8%BF%9E%E8%B5%B7%E6%9D%A5%E4%BA%86%EF%BC%9F">&#x4E3A;&#x4EC0;&#x4E48; <code>tm</code> &#x5305;&#x91CC;&#x8BCD;&#x90FD;&#x8FDE;&#x8D77;&#x6765;&#x4E86;&#xFF1F;</h3>
+<h3 id="%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88">&#x89E3;&#x51B3;&#x65B9;&#x6848;</h3>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x6253;&#x8FC7;&#x8865;&#x4E01;&#x7684; <a href="http://7jpsu1.com1.z0.glb.clouddn.com/tm_0.6-2.zip" target="_blank">tm &#x5305;</a>&#xFF0C;&#x6253;&#x8865;&#x4E01;&#x7684;&#x5BF9;&#x5E94;&#x7248;&#x672C;&#x4E3A; 0.6.2&#x3002;</p>
+<h3 id="%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0">&#x95EE;&#x9898;&#x63CF;&#x8FF0;</h3>
+<p>&#x4E0D;&#x662F;&#x5206;&#x8BCD;&#x5305;&#x7684;&#x95EE;&#x9898;&#xFF0C;tm&#x5305;&#x53EF;&#x80FD;&#x5BF9;&#x4E2D;&#x6587;&#x652F;&#x6301;&#x4E0D;&#x592A;&#x597D;&#xFF0C;&#x76F4;&#x63A5;&#x8F93;&#x5165;&#x4E2D;&#x6587;&#x5C31;&#x4F1A;&#x6709;&#x8FD9;&#x6837;&#x5B50;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x5E94;&#x8BE5;&#x53EA;&#x5728; Windows &#xFF08;&#x5404;&#x79CD;&#x7F16;&#x7801;&#x95EE;&#x9898;&#x2026;.&#xFF09;&#x4E0A;&#x4F1A;&#x6709;&#xFF0C;Linux&#x4E0B;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<pre><code class="lang-r"><span class="hljs-keyword">library</span>(tm)
+
+xx&lt;-c(
+<span class="hljs-string">&quot;&#x8FDB;&#x5165;&quot;</span>, <span class="hljs-string">&quot;&#x4E00;&#x4E2A;&quot;</span>, <span class="hljs-string">&quot;&#x5E73;&#x8861;&quot;</span>, <span class="hljs-string">&quot;&#x65F6;&#x4EE3;&quot;</span>, <span class="hljs-string">&quot;&#x73B0;&#x5728;&quot;</span>, <span class="hljs-string">&quot;&#x662F;&quot;</span>, <span class="hljs-string">&quot;&#x4F4F;&#x5B85;&quot;</span>, <span class="hljs-string">&quot;&#x4EF7;&#x683C;&#x4E0A;&#x6DA8;&quot;</span>,
+<span class="hljs-string">&quot;&#x592A;&#x5FEB;&quot;</span>, <span class="hljs-string">&quot;&#x653F;&#x5E9C;&quot;</span>, <span class="hljs-string">&quot;&#x91C7;&#x7528;&quot;</span>, <span class="hljs-string">&quot;&#x653F;&#x7B56;&quot;</span>, <span class="hljs-string">&quot;&#x65B9;&#x5F0F;&quot;</span>, <span class="hljs-string">&quot;&#x8C03;&#x63A7;&quot;</span>, <span class="hljs-string">&quot;&#x8FD9;&#x4E9B;&quot;</span>, <span class="hljs-string">&quot;&#x8D44;&#x91D1;&quot;</span>,
+<span class="hljs-string">&quot;&#x5C31;&quot;</span>, <span class="hljs-string">&quot;&#x6709;&quot;</span>, <span class="hljs-string">&quot;&#x5F80;&quot;</span>, <span class="hljs-string">&quot;&#x5546;&#x4E1A;&#x5730;&#x4EA7;&quot;</span>, <span class="hljs-string">&quot;&#x8D70;&quot;</span>, <span class="hljs-string">&quot;&#x7684;&quot;</span>, <span class="hljs-string">&quot;&#x8D8B;&#x52BF;&quot;</span>, <span class="hljs-string">&quot;&#x56E0;&#x4E3A;&quot;</span>, <span class="hljs-string">&quot;&#x5546;&#x4E1A;&#x5730;&#x4EA7;&quot;</span>,
+<span class="hljs-string">&quot;&#x628A;&quot;</span>, <span class="hljs-string">&quot;&#x81EA;&#x5DF1;&quot;</span>, <span class="hljs-string">&quot;&#x5212;&#x5206;&quot;</span>, <span class="hljs-string">&quot;&#x5230;&quot;</span>, <span class="hljs-string">&quot;&#x8FD9;&quot;</span>, <span class="hljs-string">&quot;&#x4E00;&#x7C7B;&quot;</span>, <span class="hljs-string">&quot;&#x53BB;&quot;</span>, <span class="hljs-string">&quot;&#x4ECE;&quot;</span>, <span class="hljs-string">&quot;&#x804C;&#x4E1A;&quot;</span>,
+<span class="hljs-string">&quot;&#x6765;&#x8BF4;&quot;</span>, <span class="hljs-string">&quot;&#x6211;&quot;</span>, <span class="hljs-string">&quot;&#x53EF;&#x80FD;&quot;</span>, <span class="hljs-string">&quot;&#x662F;&quot;</span>, <span class="hljs-string">&quot;&#x8BBE;&#x8BA1;&#x5E08;&quot;</span>, <span class="hljs-string">&quot;&#x533B;&#x751F;&quot;</span>, <span class="hljs-string">&quot;&#x8001;&#x5E08;&quot;</span>, <span class="hljs-string">&quot;&#x8BB0;&#x8005;&quot;</span>,
+<span class="hljs-string">&quot;&#x90A3;&quot;</span>, <span class="hljs-string">&quot;&#x6211;&quot;</span>, <span class="hljs-string">&quot;&#x5C31;&quot;</span>, <span class="hljs-string">&quot;&#x505A;&quot;</span>, <span class="hljs-string">&quot;&#x4E00;&#x4E2A;&quot;</span>, <span class="hljs-string">&quot;&#x597D;&quot;</span>, <span class="hljs-string">&quot;&#x7684;&quot;</span>, <span class="hljs-string">&quot;&#x8BB0;&#x8005;&quot;</span>, <span class="hljs-string">&quot;&#x597D;&quot;</span>, <span class="hljs-string">&quot;&#x7684;&quot;</span>,
+<span class="hljs-string">&quot;&#x533B;&#x751F;&quot;</span>, <span class="hljs-string">&quot;&#x8FD9;&#x662F;&quot;</span>, <span class="hljs-string">&quot;&#x793E;&#x4F1A;&quot;</span>, <span class="hljs-string">&quot;&#x4E0A;&quot;</span>, <span class="hljs-string">&quot;&#x9700;&#x8981;&quot;</span>, <span class="hljs-string">&quot;&#x7684;&quot;</span>, <span class="hljs-string">&quot;&#x73B0;&#x5728;&quot;</span>, <span class="hljs-string">&quot;&#x8FD9;&#x4E2A;&quot;</span>, <span class="hljs-string">&quot;&#x65F6;&#x4EE3;&quot;</span>,
+<span class="hljs-string">&quot;&#x786E;&#x5B9E;&quot;</span>, <span class="hljs-string">&quot;&#x662F;&quot;</span>, <span class="hljs-string">&quot;&#x4E00;&#x4E2A;&quot;</span>, <span class="hljs-string">&quot;&#x7279;&#x522B;&quot;</span>, <span class="hljs-string">&quot;&#x597D;&quot;</span>, <span class="hljs-string">&quot;&#x7684;&quot;</span>, <span class="hljs-string">&quot;&#x65F6;&#x4EE3;&quot;</span>, <span class="hljs-string">&quot;&#x4E5F;&quot;</span>, <span class="hljs-string">&quot;&#x662F;&quot;</span>)
+
+corpus = Corpus(VectorSource(xx))
+dtm_psy = TermDocumentMatrix(corpus)
+tdm = DocumentTermMatrix(corpus,control = list(wordLengths = c(<span class="hljs-number">1</span>, <span class="hljs-literal">Inf</span>)))
+inspect(tdm)
+</code></pre>
+<pre><code class="lang-r">Terms
+Docs <span class="hljs-number">20</span> <span class="hljs-number">30</span> 
+  &#x5965;&#x8FD0;&#x4F1A;\n &#x628A;\n &#x767D;&#x9886; &#x5317;&#x4EAC;&#x5E02;\n &#x80CC;&#x9053;&#x800C;&#x9A70; &#x672C;&#x6765; &#x4E0D;\n &#x4E0D;&#x5927; &#x4E0D;&#x597D; &#x8D22;&#x7ECF; &#x91C7;&#x7528;
+   <span class="hljs-number">1</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span>
+</code></pre>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../faq/index.html" class="navigation navigation-prev " aria-label="Previous page: 常见问题"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../faq/s2t.html" class="navigation navigation-next " aria-label="Next page: 繁简转换"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-ga/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-disqus/plugin.js"></script>
+    
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2},"ga":{"token":"UA-58841928-1","configuration":"auto"},"disqus":{"shortName":"qinwenfeng"}};
+    gitbook.start(config);
+});
+</script>
+
+        <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create', 'UA-58841928-1', 'auto');ga('send', 'pageview');</script>
+    </body>
+    
+</html>
