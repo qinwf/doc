@@ -1,0 +1,475 @@
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>初始化选项 · jiebaR 中文分词</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="worker() 用于新建分词引擎，可以同时新建多个分词引擎。引擎的类型有： mix（混合模型）, mp（最大概率模型）, hmm（HMM模型）, query（索引模型）, tag（标记模型）, simhash（Simhash 模型）和 keywords（关键词模型），共7种。">
+        <meta name="generator" content="GitBook 3.0.0-pre.5">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dict.html" />
+    
+    
+    <link rel="prev" href="sim.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book"
+    data-level="7"
+    data-chapter-title="初始化选项"
+    data-filepath="worker.md"
+    data-basepath="."
+    data-revision="Fri Apr 29 2016 22:07:06 GMT+0800 (中国标准时间)"
+    data-innerlanguage="">
+    
+
+<div class="book-summary">
+    
+    <nav role="navigation">
+        <ul class="summary">
+            
+            
+
+            
+
+
+            
+            
+    
+        <li class="chapter " data-level="0" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="intro.html">
+            
+                <a href="intro.html">
+            
+                    
+                        <b>1.</b>
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="install.html">
+            
+                <a href="install.html">
+            
+                    
+                        <b>2.</b>
+                    
+                    安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="segment.html">
+            
+                <a href="segment.html">
+            
+                    
+                        <b>3.</b>
+                    
+                    分词
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="tagger.html">
+            
+                <a href="tagger.html">
+            
+                    
+                        <b>4.</b>
+                    
+                    词性标记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="keywords.html">
+            
+                <a href="keywords.html">
+            
+                    
+                        <b>5.</b>
+                    
+                    关键词提取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="sim.html">
+            
+                <a href="sim.html">
+            
+                    
+                        <b>6.</b>
+                    
+                    Simhash 与 海明距离
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="7" data-path="worker.html">
+            
+                <a href="worker.html">
+            
+                    
+                        <b>7.</b>
+                    
+                    初始化选项
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="dict.html">
+            
+                <a href="dict.html">
+            
+                    
+                        <b>8.</b>
+                    
+                    词典格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="cidian.html">
+            
+                <a href="cidian.html">
+            
+                    
+                        <b>9.</b>
+                    
+                    cidian 包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10" >
+            
+                <span>
+            
+                    
+                        <b>10.</b>
+                    
+                    常见问题
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="10.1" data-path="faq/tm.html">
+            
+                <a href="faq/tm.html">
+            
+                    
+                        <b>10.1.</b>
+                    
+                    关于tm包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.2" data-path="faq/s2t.html">
+            
+                <a href="faq/s2t.html">
+            
+                    
+                        <b>10.2.</b>
+                    
+                    繁简转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="10.3" data-path="faq/warnings.html">
+            
+                <a href="faq/warnings.html">
+            
+                    
+                        <b>10.3.</b>
+                    
+                    警告信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="11" data-path="v0.7.html">
+            
+                <a href="v0.7.html">
+            
+                    
+                        <b>11.</b>
+                    
+                    旧版本文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            <li class="divider"></li>
+            
+
+            <li>
+                <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                    Published with GitBook
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+</div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >初始化选项</a>
+    </h1>
+</div>
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            <section class="normal markdown-section">
+                            
+                            <h2 id="worker">worker()</h2>
+<p><code>worker()</code> &#x7528;&#x4E8E;&#x65B0;&#x5EFA;&#x5206;&#x8BCD;&#x5F15;&#x64CE;&#xFF0C;&#x53EF;&#x4EE5;&#x540C;&#x65F6;&#x65B0;&#x5EFA;&#x591A;&#x4E2A;&#x5206;&#x8BCD;&#x5F15;&#x64CE;&#x3002;&#x5F15;&#x64CE;&#x7684;&#x7C7B;&#x578B;&#x6709;&#xFF1A; mix&#xFF08;&#x6DF7;&#x5408;&#x6A21;&#x578B;&#xFF09;, mp&#xFF08;&#x6700;&#x5927;&#x6982;&#x7387;&#x6A21;&#x578B;&#xFF09;, hmm&#xFF08;HMM&#x6A21;&#x578B;&#xFF09;, query&#xFF08;&#x7D22;&#x5F15;&#x6A21;&#x578B;&#xFF09;, tag&#xFF08;&#x6807;&#x8BB0;&#x6A21;&#x578B;&#xFF09;, simhash&#xFF08;Simhash &#x6A21;&#x578B;&#xFF09;&#x548C; keywords&#xFF08;&#x5173;&#x952E;&#x8BCD;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5171;7&#x79CD;&#x3002;</p>
+<h2 id="&#x9ED8;&#x8BA4;&#x53C2;&#x6570;">&#x9ED8;&#x8BA4;&#x53C2;&#x6570;</h2>
+<pre><code class="lang-r">worker(type = <span class="hljs-string">&quot;mix&quot;</span>, dict = DICTPATH, hmm = HMMPATH, user = USERPATH,
+  idf = IDFPATH, stop_word = STOPPATH, write = <span class="hljs-literal">T</span>, qmax = <span class="hljs-number">20</span>, topn = <span class="hljs-number">5</span>,
+  encoding = <span class="hljs-string">&quot;UTF-8&quot;</span>, detect = <span class="hljs-literal">T</span>, symbol = <span class="hljs-literal">F</span>, lines = <span class="hljs-number">1e+05</span>,
+  output = <span class="hljs-literal">NULL</span>, bylines = <span class="hljs-literal">F</span>)
+</code></pre>
+<h2 id="&#x53C2;&#x6570;&#x8BF4;&#x660E;">&#x53C2;&#x6570;&#x8BF4;&#x660E;</h2>
+<h4 id="type-&#x5F15;&#x64CE;&#x7C7B;&#x578B;">type &#x5F15;&#x64CE;&#x7C7B;&#x578B;</h4>
+<p>&#x5F15;&#x64CE;&#x7684;&#x7C7B;&#x578B;&#x6709;&#xFF1A; mix&#xFF08;&#x6DF7;&#x5408;&#x6A21;&#x578B;&#xFF09;, mp&#xFF08;&#x6700;&#x5927;&#x6982;&#x7387;&#x6A21;&#x578B;&#xFF09;, hmm&#xFF08;HMM&#x6A21;&#x578B;&#xFF09;, query&#xFF08;&#x7D22;&#x5F15;&#x6A21;&#x578B;&#xFF09;, tag&#xFF08;&#x6807;&#x8BB0;&#x6A21;&#x578B;&#xFF09;, simhash&#xFF08;Simhash &#x6A21;&#x578B;&#xFF09;&#x548C; keywords&#xFF08;&#x5173;&#x952E;&#x8BCD;&#x6A21;&#x578B;&#xFF09;&#xFF0C;&#x5171;7&#x79CD;&#x3002;</p>
+<h4 id="dict-&#x7CFB;&#x7EDF;&#x8BCD;&#x5178;">dict &#x7CFB;&#x7EDF;&#x8BCD;&#x5178;</h4>
+<p>&#x4F18;&#x5148;&#x8F7D;&#x5165;&#x7684;&#x8BCD;&#x5178;&#xFF0C;&#x5305;&#x62EC;&#x8BCD;&#x3001;&#x8BCD;&#x9891;&#x3001;&#x8BCD;&#x6027;&#x6807;&#x8BB0;&#x4E09;&#x5217;&#x3002;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x81EA;&#x5B9A;&#x4E49;&#x8DEF;&#x5F84;&#x3002;</p>
+<h4 id="hmm-hmm&#x6A21;&#x578B;&#x8DEF;&#x5F84;">hmm HMM&#x6A21;&#x578B;&#x8DEF;&#x5F84;</h4>
+<p>HMM&#x6A21;&#x578B;&#x8DEF;&#x5F84;</p>
+<h4 id="user-&#x7528;&#x6237;&#x8BCD;&#x5178;">user &#x7528;&#x6237;&#x8BCD;&#x5178;</h4>
+<p>&#x7528;&#x6237;&#x8BCD;&#x5178;&#xFF0C;&#x5305;&#x62EC;&#x8BCD;&#x3001;&#x8BCD;&#x6027;&#x6807;&#x8BB0;&#x4E24;&#x5217;&#x3002;&#x7528;&#x6237;&#x8BCD;&#x5178;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x8BCD;&#x7684;&#x8BCD;&#x9891;&#x5747;&#x4E3A;&#x7CFB;&#x7EDF;&#x8BCD;&#x5178;&#x4E2D;&#x7684;&#x6700;&#x5927;&#x8BCD;&#x9891;&#x3002;&#x53EF;&#x4EE5;&#x8F93;&#x5165;&#x81EA;&#x5B9A;&#x4E49;&#x8DEF;&#x5F84;&#x3002;</p>
+<h4 id="idf-idf&#x8BCD;&#x5178;">idf IDF&#x8BCD;&#x5178;</h4>
+<p>IDF &#x8BCD;&#x5178;&#xFF0C;&#x5173;&#x952E;&#x8BCD;&#x63D0;&#x53D6;&#x4F7F;&#x7528;&#x3002;</p>
+<h4 id="stopword-&#x5173;&#x952E;&#x8BCD;&#x7528;&#x505C;&#x6B62;&#x8BCD;&#x5E93;">stop_word &#x5173;&#x952E;&#x8BCD;&#x7528;&#x505C;&#x6B62;&#x8BCD;&#x5E93;</h4>
+<p>&#x5173;&#x952E;&#x8BCD;&#x63D0;&#x53D6;&#x4F7F;&#x7528;&#x7684;&#x505C;&#x6B62;&#x8BCD;&#x5E93;&#x3002;</p>
+<h4 id="write-&#x5199;&#x5165;&#x6587;&#x4EF6;">write &#x5199;&#x5165;&#x6587;&#x4EF6;</h4>
+<p>&#x662F;&#x5426;&#x5C06;&#x6587;&#x4EF6;&#x5206;&#x8BCD;&#x7ED3;&#x679C;&#x5199;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5426;&#x3002;&#x53EA;&#x5728;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x4E3A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;&#x672C;&#x53C2;&#x6570;&#x624D;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#x3002;&#x672C;&#x53C2;&#x6570;&#x53EA;&#x5BF9;&#x5206;&#x8BCD;&#x548C;&#x8BCD;&#x6027;&#x6807;&#x6CE8;&#x6709;&#x6548;&#x3002;</p>
+<h4 id="qmax-&#x6700;&#x5927;&#x7D22;&#x5F15;&#x957F;&#x5EA6;">qmax &#x6700;&#x5927;&#x7D22;&#x5F15;&#x957F;&#x5EA6;</h4>
+<p>&#x7D22;&#x5F15;&#x6A21;&#x578B;&#x4E2D;&#xFF0C;&#x6700;&#x5927;&#x53EF;&#x80FD;&#x6210;&#x8BCD;&#x7684;&#x5B57;&#x7B26;&#x6570;&#x3002;</p>
+<h4 id="topn-&#x5173;&#x952E;&#x8BCD;&#x6570;">topn &#x5173;&#x952E;&#x8BCD;&#x6570;</h4>
+<p>&#x63D0;&#x53D6;&#x7684;&#x5173;&#x952E;&#x8BCD;&#x6570;&#x3002;</p>
+<h4 id="encoding-&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7F16;&#x7801;">encoding &#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7F16;&#x7801;</h4>
+<p>&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;UTF-8&#x3002;</p>
+<h4 id="detect-&#x68C0;&#x6D4B;&#x7F16;&#x7801;">detect &#x68C0;&#x6D4B;&#x7F16;&#x7801;</h4>
+<p>&#x662F;&#x5426;&#x68C0;&#x67E5;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x7F16;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4;&#x68C0;&#x67E5;&#x3002;</p>
+<h4 id="symbol-&#x4FDD;&#x7559;&#x7B26;&#x53F7;">symbol &#x4FDD;&#x7559;&#x7B26;&#x53F7;</h4>
+<p>&#x662F;&#x5426;&#x4FDD;&#x7559;&#x7B26;&#x53F7;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x4FDD;&#x7559;&#x7B26;&#x53F7;&#x3002;</p>
+<h4 id="lines-&#x8BFB;&#x53D6;&#x884C;&#x6570;">lines &#x8BFB;&#x53D6;&#x884C;&#x6570;</h4>
+<p>&#x6BCF;&#x6B21;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x6700;&#x5927;&#x884C;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x63A7;&#x5236;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5BF9;&#x4E8E;&#x5927;&#x6587;&#x4EF6;&#xFF0C;&#x5B9E;&#x73B0;&#x5206;&#x6B21;&#x8BFB;&#x53D6;&#x3002;</p>
+<h4 id="output-&#x8F93;&#x51FA;&#x8DEF;&#x5F84;">output &#x8F93;&#x51FA;&#x8DEF;&#x5F84;</h4>
+<p>&#x6307;&#x5B9A;&#x8F93;&#x51FA;&#x8DEF;&#x5F84;&#xFF0C;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x8DEF;&#x5F84;&#x3002;&#x53EA;&#x5728;&#x8F93;&#x5165;&#x5185;&#x5BB9;&#x4E3A;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x65F6;&#xFF0C;&#x672C;&#x53C2;&#x6570;&#x624D;&#x4F1A;&#x88AB;&#x4F7F;&#x7528;&#x3002;</p>
+<h4 id="bylines-&#x6309;&#x884C;&#x8F93;&#x51FA;">bylines &#x6309;&#x884C;&#x8F93;&#x51FA;</h4>
+<p>&#x6587;&#x4EF6;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x6309;&#x884C;&#x8F93;&#x51FA;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5219;&#x5C06;&#x8BFB;&#x5165;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x5B57;&#x7B26;&#x4E32;&#x5411;&#x91CF;&#x6309;&#x884C;&#x9010;&#x4E2A;&#x8FDB;&#x884C;&#x5206;&#x8BCD;&#x64CD;&#x4F5C;&#x3002;</p>
+
+                            
+                            </section>
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="sim.html" class="navigation navigation-prev " aria-label="Previous page: Simhash 与 海明距离">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dict.html" class="navigation navigation-next " aria-label="Next page: 词典格式">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+</div>
+
+        
+    <script src="gitbook/app.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-ga/plugin.js"></script>
+        
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fanjian/fanjian.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fanjian/button.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+    <script>
+    require(["gitbook"], function(gitbook) {
+        gitbook.start({"ga":{"token":"UA-58841928-1","configuration":"auto"},"disqus":{"shortName":"qinwenfeng","useIdentifier":false},"fanjian":{},"highlight":{},"search":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}}});
+    });
+    </script>
+
+    </body>
+</html>
